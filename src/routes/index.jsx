@@ -1,10 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import NowPlaying from '../pages/NowPlaying'
-import Popular from '../pages/Popular'
-import TopRated from '../pages/TopRated'
-import UpComing from '../pages/UpComing'
 import { PATH } from '../hook/usePath'
+import { SingleMovie,NowPlaying,Popular,TopRated,UpComing} from '../pages'
 
 function CustomRoutes() {
     const routeList = [
@@ -28,6 +25,11 @@ function CustomRoutes() {
             path:PATH.upComing,
             element:<UpComing/>
         },
+        {
+            id:5,
+            path:PATH.singleMovie,
+            element:<SingleMovie/>
+        }
     ]
   return (
   <Routes>
